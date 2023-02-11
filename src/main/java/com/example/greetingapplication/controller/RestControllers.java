@@ -3,6 +3,7 @@ package com.example.greetingapplication.controller;
 import com.example.greetingapplication.service.ServiceInterface;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RestController;
 
 import java.util.List;
@@ -15,5 +16,8 @@ public class RestControllers {
     public String getAllEmployee(){
         return service.printMessage();
     }
-
+@GetMapping("/company/{name}")
+    public String inputUser(@PathVariable("name") String name){
+        return service.UseInput(name);
+}
 }
