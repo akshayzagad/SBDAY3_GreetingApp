@@ -9,4 +9,9 @@ public class ServiceLayer implements ServiceInterface{
     public String printMessage() {
         return "Hello World";
     }
+
+    @Override
+    public String UseInput(String Name) {
+        return " Hello World " + Name;
+    }
 }
